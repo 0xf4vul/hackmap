@@ -28,7 +28,7 @@ describe('serialization', () => {
 
     expect(thread.number).toEqual(123)
     expect(thread.title).toEqual(issue.title)
-    expect(thread.helpText).toEqual(issue.body)
+    expect(thread.helpHtml).toEqual(issue.body)
     expect(thread.floorplanUrl).toEqual('http://www.example.com/foo.jpg')
   })
 })

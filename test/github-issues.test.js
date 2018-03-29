@@ -106,7 +106,7 @@ describe('GitHubIssueService', () => {
       let expectedThread = {
         number: 1,
         title: 'title',
-        helpText: 'hello <!-- floorplan: http://example.com -->',
+        helpHtml: 'hello <!-- floorplan: http://example.com -->',
         floorplanUrl: 'http://example.com'
       }
 
@@ -120,7 +120,7 @@ describe('GitHubIssueService', () => {
       cfg.onMainThreadLoaded = (mainThread) => {
         expect(mainThread.number).toEqual(expectedThread.number)
         expect(mainThread.title).toEqual(expectedThread.title)
-        expect(mainThread.helpText).toEqual(expectedThread.helpText)
+        expect(mainThread.helpHtml).toEqual(expectedThread.helpHtml)
         expect(mainThread.floorplanUrl).toEqual(expectedThread.floorplanUrl)
         done()
       }
